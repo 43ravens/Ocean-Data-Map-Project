@@ -945,7 +945,8 @@ export default class TimeSelect extends React.Component {
         }
 
         let current_time = ' '
-        if (this.props.currentTime != undefined) {
+        console.warn("CURRENT TIME: ", this.props.currentTime);
+        if (this.props.currentTime !== undefined) {
             //let month = this.props.currentTime.getUTCMonth().toString()
             //if (month.length === 1) {
             //    month = '0' + month
@@ -954,6 +955,7 @@ export default class TimeSelect extends React.Component {
             //if (date.length === 1) {
             //    date = '0' + date
             //}
+            console.warn("QUANTUM: ", this.props.quantum);
             if (this.props.quantum === 'hour') {
                 current_time = this.props.currentTime.format('YYYY/MM/DD[ : ]HH[z]')
                 //current_time = this.props.currentTime.getUTCFullYear() + '/' + month + '/' + date + ' : ' + this.props.currentTime.getUTCHours() + 'z'
